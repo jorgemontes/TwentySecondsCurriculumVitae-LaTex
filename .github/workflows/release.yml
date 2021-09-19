@@ -37,10 +37,13 @@ jobs:
         with:
           root_file: Twenty-Seconds_cv.tex
       
+      - name: Change final file name
+        run: mv Twenty-Seconds_cv.pdf jorgemontes_cv.pdf
+
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: Twenty-Seconds_cv.pdf
+          files: jorgemontes_cv.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.TWENTY_GITHUB_TOKEN }}
           
