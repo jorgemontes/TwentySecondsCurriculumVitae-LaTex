@@ -1,59 +1,61 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Twenty Seconds Curriculum Vitae in LaTex
+% ****************************************
+% 
+% License: MIT
+%
+% For further information please visit:
+% https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[]{twentysecondcv}
- 
 \begin{document}
 
-%%%%%%%%%%%%%%%%%
-%%PROFILE SIDE BAR%%
-%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%
-%%PERSONAL INFO%%%
-%%%%%%%%%%%%%%%%
-
-\profilepic{jorgemontes.jpeg} %path of profile pic
-\cvname{Jorge Montes} %your name
-\cvjobtitle{Java Developer}%your actual job position
-\cvdate{7 June 1986}%date of birth
-\cvaddress{Medell\'in - Colombia}%address
-\cvnumberphone{+57 3164688577}%telphone number
+%%%%%%%%%%%%%%%%%%%%%%
+%% PROFILE SIDE BAR %%
+%%%%%%%%%%%%%%%%%%%%%%
+% personal info
+\profilepic{jorgemontes.jpeg}          % path of profile pic
+\cvname{Jorge Montes}                   % your name
+\cvjobtitle{Java Developer}          % your actual job position
+\cvdate{7 June 1986}        % date of birth
+\cvaddress{Medell\'in - Colombia}       % address
+\cvnumberphone{+57 3164688577}   % telephone number
 \cvmail{jorge.a.montes@pm.me}%e-mail
 \cvsite{https://jorgemontes.github.io/}%personal site
 
-
 \aboutme{
+
 Systems Engineer, with extensive knowledge and experience in Software Engineering and Software Development for enterprise applications. Honest, fun to work with, self-managed, problem solver, high self-learning skills. Interests in quality practices, infraestructure, design and software architecture.}%About me section
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%Skill bar section, each skill must have a value between 0 an 6 (float)%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Skill bar section, each skill must have a value between 0 an 6 (float) %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \skills{{Design Patterns/4},{Linux/5},{Cloud/4.3},{OOP/4},{Java/5.61},{TDD/4}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%Skill text section, each skill must have a value between 0 an 6%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%Skill text section, each skill must have a value between 0 an 6%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \skillstext{{openly expresses ideas/4},{negotiates, resolves differences/3},{Agile Methodologies/4}}
 
 \makeprofile
-%%%%%%%%%%%%%%%%%%%%
-%%END PROFILE SIDE BAR%%
-%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% END PROFILE SIDE BAR %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%BODY%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%
-%%SIMPLE SECTION%%%%%%
-%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+%%%%%% BODY %%%%%%
+%%%%%%%%%%%%%%%%%%
+% Simple Section
 \section{interests}
 I love to travel the world, meeting new people, hangout with friends; sometimes i play the guitar and play videogames.
 
 \section{education}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%TWENTY LIST ITEMS%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% TWENTY LIST ITEMS %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%    Four arguments: date; title; where; description %%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{twenty}
   \twentyitem
     {Since 2019}
@@ -82,14 +84,41 @@ I love to travel the world, meeting new people, hangout with friends; sometimes 
     {}
 \end{twenty}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%TWENTY LIST SHORTITEMS %%%%%%%%%%%%%
+%%% Two arguments: date; title/description %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\section{publications}
+%%\begin{twentyshort}
+%%  \twentyitemshort
+%%    {1865}
+%%    {Chapter One, Down the Rabbit Hole.}
+%%  \twentyitemshort
+%%    {1865}
+%%    {Chapter Two, The Pool of Tears.}
+%%  \twentyitemshort
+%%    {1865}
+%%    {Chapter Three,  The Caucus Race and a Long Tale.}
+%%  \twentyitemshort
+%%    {1865}
+%%    {Chapter Four,  The Rabbit Sends a Little Bill.}
+%%  \twentyitemshort
+%%    {1865}
+%%    {Chapter Five,  Advice from a Caterpillar.}
+%%\end{twentyshort}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%TWENTY LIST SHORTITEMS%%%%%%%%%%%%%%
-%%% Two arguments: date; title/description %%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\section{awards}
+%%\begin{twentyshort}
+%%  \twentyitemshort
+%%    {1987}
+%%    {All-Time Best Fantasy Novel.}
+%%  \twentyitemshort
+%%    {1998}
+%%    {All-Time Best Fantasy Novel before 1990.}
+%%\end{twentyshort}
+
 \section{experience}
-
-\begin{twentyshort}
+\begin{twenty}
 \twentyitem
     {2018 - now}
     {Senior Software Engineer}
@@ -120,60 +149,25 @@ I love to travel the world, meeting new people, hangout with friends; sometimes 
     {Academic Assistant}
     {Escuela Colombiana de Ingenier\'ia  Julio Garavito}
     {Object Oriented Programming, Computational Theory 2. Supporting students with academic issues on the subject. Grading Quizzes, Home works and Projects. Some classes if requested}
-\end{twentyshort}
+
+\end{twenty}
 
 \section{languages}
 
-\begin{twentyshort}
- \twentyitemshort
+\begin{twenty}
+ \twentyitem
     {English}
     {IELTS: 6.5 - B2}
-  \twentyitemshort
+  \twentyitem
     {Spanish}
     {Native}
-  \twentyitemshort
+  \twentyitem
     {German}
     {Beginner}
-\end{twentyshort}
+\end{twenty}
 
-
-%\section{awards}
-
-%\begin{twentyshort}
-%  \twentyitemshort
-%    {1987}
-%    {All-Time Best Fantasy Novel.}
-%  \twentyitemshort
-%    {1998}
-%    {All-Time Best Fantasy Novel before 1990.}
-%\end{twentyshort}
-
-
-%\section{experience}
-
-%\begin{twenty}
-%  \twentyitem
-%    {1900}
-%    {Alice in Wonderland-The Circra (1900's) Silent Film.}
-%    {Film}
-%    {The first Alice on film was over a hundred years ago.}
-%  \twentyitem
-%    {1933}
-%    {Alice in Wonderland 1933 version.}
-%    {Film}
-%    {This film stars Ethel griffies and Charlotte Henry. It was a box office flop when it was released.}
-%\twentyitem
-%    {1951}
-%    {Disney Film.}
-%    {Film}
-%    {Walt Disney brings Lewis Carroll's fantasy story to life in this well done animated classic. Even though many elements from the book were dropped, such as the duchess with the baby pig and mock turtle, this version is without a doubt the most famous Alice adaption made.}
-
-%\end{twenty}
-%\section{other information}
-%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a “poky little house,” and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
 
 %%%%%%%%%%%%%%%%%%%%
-%%%%%ENDBODY%%%%%%%%
+%%%%% ENDBODY %%%%%%
 %%%%%%%%%%%%%%%%%%%%
-
 \end{document} 
