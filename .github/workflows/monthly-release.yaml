@@ -1,0 +1,26 @@
+name: Create Tag
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
+      - name: Get Latest Version
+        id: get_latest_tag
+        run: echo ::set-output name=tag::$(git describe --tags $(git rev-list --tags --max-count=1))
+
+      - name: New Tag Version
+        id: generate_new_tag
+        run: echo ::set-output name=tag::$(python increment_version.py ${{ steps.get_latest_tag.outputs.tag }})
+
+      - name: Create Tag
+        run: git tag ${{ steps.generate_new_tag.outputs.tag }}
+
+      - name: Push new tag
+        run: git push origin --tags
