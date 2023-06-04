@@ -12,6 +12,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         
+      - name: Fetch All tags
+        run: git fetch --tags
+        
       - name: Get Latest Version
         id: get_latest_tag
         run: git describe --abbrev=0 --tags >> $GITHUB_OUTPUT
