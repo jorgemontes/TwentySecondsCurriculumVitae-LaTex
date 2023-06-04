@@ -14,7 +14,7 @@ jobs:
         
       - name: Get Latest Version
         id: get_latest_tag
-        run: name=tag::$(git describe --tags $(git rev-list --tags --max-count=1)) >> $GITHUB_OUTPUT
+        run: git describe --tags >> $GITHUB_OUTPUT
         
       - name: Print State
         run: echo $GITHUB_OUTPUT
