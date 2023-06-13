@@ -18,13 +18,13 @@ jobs:
       - name: Get previous tag
         id: previoustag
         uses: "WyriHaximus/github-action-get-previous-tag@v1"
+      
+      - name: 'Get next minor version'
+        id: semvers
+        uses: "WyriHaximus/github-action-next-semvers@v1"
+        with:
+          version: ${{ steps.previoustag.outputs.tag }}
         
-      - name: Print State
-        run: echo $GITHUB_OUTPUT
-
-      - name: New Tag Version
-        id: generate_new_tag
-        run: echo ::set-output name=tag::$(python increment_version.py ${{ steps.get_latest_tag.outputs.tag }})
 
       - name: Create Tag
         run: git tag ${{ steps.generate_new_tag.outputs.tag }}
