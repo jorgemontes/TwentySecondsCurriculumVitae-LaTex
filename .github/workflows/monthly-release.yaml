@@ -15,9 +15,9 @@ jobs:
       - name: Fetch All tags
         run: git fetch --tags
         
-      - name: Get Latest Version
-        id: get_latest_tag
-        run: git describe --abbrev=0 --tags >> $GITHUB_OUTPUT
+      - name: Get previous tag
+        id: previoustag
+        uses: "WyriHaximus/github-action-get-previous-tag@v1"
         
       - name: Print State
         run: echo $GITHUB_OUTPUT
