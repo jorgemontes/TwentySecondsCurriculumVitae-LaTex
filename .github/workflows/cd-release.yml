@@ -20,6 +20,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: jorgemontes_cv.pdf
+          path: jorgemontes_cv.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.TWENTY_GITHUB_TOKEN }}
 
