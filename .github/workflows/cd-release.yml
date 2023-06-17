@@ -16,6 +16,9 @@ jobs:
           root_file: Twenty-Seconds_cv.tex
       - name: Change final file name
         run: mv Twenty-Seconds_cv.pdf jorgemontes_cv.pdf
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
       - name: Upload PDF
         uses: actions/upload-artifact@v3
         with:
