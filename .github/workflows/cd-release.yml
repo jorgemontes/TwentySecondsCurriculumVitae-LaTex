@@ -1,0 +1,30 @@
+name: Release
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Download pic from gravatar 
+        run: wget https://www.gravatar.com/avatar/${{ secrets.GRAVATAR_HASH }}.jpeg?s=400 -O jorgemontes.jpeg
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: Twenty-Seconds_cv.tex
+      - name: Change final file name
+        run: mv Twenty-Seconds_cv.pdf jorgemontes_cv.pdf
+      - name: Upload PDF
+        uses: actions/upload-artifact@v3
+        with:
+          files: jorgemontes_cv.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.TWENTY_GITHUB_TOKEN }}
+
+          
+      
+      
+      
+    
