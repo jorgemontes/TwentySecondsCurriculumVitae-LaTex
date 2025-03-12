@@ -205,7 +205,7 @@
         % CV date
         \ifthenelse{\equal{\givencvdate}{}}{}{\textsc{\Large\icon{\Info}} & \givencvdate\\}
         % CV address
-        \ifthenelse{\equal{\givencvaddress}{}}{}{\textsc{\Large\icon{\Map}} & \givencvaddress\\}
+        \ifthenelse{\equal{\givencvaddress}{}}{}{\textsc{\Large\icon{\faMapMarker}} & \givencvaddress\\}
         % CV phone
         \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \givennumberphone\\}
         % CV site
