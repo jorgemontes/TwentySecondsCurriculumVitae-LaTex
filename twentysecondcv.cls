@@ -107,7 +107,7 @@
 	\newcommand{\cvnumberphone}[1]{\renewcommand{\givennumberphone}{#1}}    % phone
 	\newcommand{\cvaddress}[1]{\renewcommand{\givencvaddress}{#1}}          % address
 	\newcommand{\cvsite}[1]{\renewcommand{\givencvsite}{#1}}                % site
-	\newcommand{\aboutme}[1]{\renewcommand{\givenaboutme}{  \justifying#1}} % about me
+	\newcommand{\aboutme}[1]{\renewcommand{\givenaboutme}{#1}}              % about me
 	\newcommand{\profilepic}[1]{\renewcommand{\givenprofilepic}{#1}}        % picture
 	\newcommand{\cvname}[1]{\renewcommand{\givencvname}{#1}}                % name
 	\newcommand{\cvjobtitle}[1]{\renewcommand{\givencvjobtitle}{#1}}        % job title
