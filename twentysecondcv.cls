@@ -299,14 +299,6 @@
     #4\vspace{\parsep}%
   }\\%
 }
-\newcommand{\twentyitemshort}[4]{%
-  \hspace{5pt}#1&\parbox[t]{10.5cm}{%
-    \textbf{#2}%
-    \hfill%
-    {\footnotesize#3}\\%
-    #4\vspace{\parsep}%
-  }\\%
-}
 \setlength{\tabcolsep}{0pt}
 \newenvironment{twentyicon}{%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
